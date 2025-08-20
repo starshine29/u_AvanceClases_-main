@@ -1014,7 +1014,6 @@ GameObject:
   - component: {fileID: 1097813954}
   - component: {fileID: 1097813953}
   - component: {fileID: 1097813952}
-  - component: {fileID: 1097813956}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1111,20 +1110,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 374718971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1097813956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097813951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c6e04130812fb34a932f24e10efb062, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::interactions
-  key1: 0
-  key2: 0
 --- !u!1001 &1102274507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1318,9 +1303,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1362749085}
+  - component: {fileID: 1362749086}
   m_Layer: 0
   m_Name: door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1342,6 +1328,27 @@ Transform:
   - {fileID: 1770113583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 178.439, z: 0}
+--- !u!65 &1362749086
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362749084}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0656378, y: 3.7181575, z: 1}
+  m_Center: {x: -0.53281915, y: 1.3590788, z: 3.7670211e-10}
 --- !u!1 &1388310984 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7685423809495335312, guid: b3f0a0770fa85f1469319660278e9ebe, type: 3}
@@ -1361,6 +1368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::interactions
   key1: 0
   key2: 0
+  door: {fileID: 1770113582}
 --- !u!1 &1504657312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,6 +1545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1770113583}
+  - component: {fileID: 1770113584}
   m_Layer: 0
   m_Name: Door_Pivot
   m_TagString: Untagged
@@ -1560,6 +1569,28 @@ Transform:
   - {fileID: 1761277080}
   m_Father: {fileID: 1362749085}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!95 &1770113584
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770113582}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c13bd4f3eb01c4943b15f2a1167ea965, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2121854671
 GameObject:
   m_ObjectHideFlags: 0

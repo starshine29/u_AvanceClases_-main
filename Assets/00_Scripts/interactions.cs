@@ -8,26 +8,17 @@ public class interactions : MonoBehaviour
 {
     [SerializeField] public bool key1 = false;
     [SerializeField] public bool key2 = false;
+    public GameObject door;
+    private Animator animatorDoor;
 
-
-    /*private void OnTriggerEnter(Collider other) //entra en un trigger
-
+    private void Start()
     {
-        if (other.CompareTag("NPC")) //si choca con un objeto de tag NPC
-        {
-            Debug.Log("Toma la llave"); //llave 1
-            key1 = true;
-        }
-
-        if (other.CompareTag("NPC2"))
-            {
-             Debug.Log("Toma otra llave"); //llave 2
-             key2 = true;
-            }
+        animatorDoor = door.GetComponent<Animator>();
     }
-}*/
 
     private void OnTriggerEnter(Collider other)
+    
+    
     {
         switch (other.tag)
         {
@@ -39,6 +30,11 @@ public class interactions : MonoBehaviour
             case "NPC2":
                 Debug.Log("tengo otra llave");
                 key2 = true;
+                break;
+            
+            case "Door":
+                Debug.Log("abri la puerta");
+                animatorDoor.SetBool("Anim_Door", true);
                 break;
             
             default:
