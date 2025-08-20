@@ -31,7 +31,7 @@ public class interactions : MonoBehaviour
     {
         switch (other.tag)
         {
-            case "NPC1":
+            case "NPC":
                 Debug.Log("tengo la llave 1");
                 key1 = true;
                 break;
